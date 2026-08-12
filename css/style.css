@@ -2168,3 +2168,97 @@ footer p {
     }
 
 }
+/* =========================================================
+   FOUR SERVICES
+========================================================= */
+
+.services-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #d9ddda;
+    border-left: 1px solid #d9ddda;
+}
+
+.service-card {
+    position: relative;
+    display: block;
+    padding: 35px 28px 40px;
+    min-height: 310px;
+    border-right: 1px solid #d9ddda;
+    border-bottom: 1px solid #d9ddda;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease,
+                background 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background: #f1f4f0;
+}
+
+.service-number {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: #71817d;
+    margin-bottom: 55px;
+}
+
+.service-content h3 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+}
+
+.service-price,
+.service-location {
+    display: block;
+    color: #55736e;
+    margin-bottom: 18px;
+}
+
+.service-content p {
+    line-height: 1.7;
+    color: #626967;
+    margin-bottom: 25px;
+}
+
+.service-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #263533;
+    border-bottom: 1px solid #55736e;
+    padding-bottom: 4px;
+}
+
+
+/* =========================================================
+   MOBILE — FOUR SERVICES
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .services-section {
+        padding: 70px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+        padding: 30px 25px 35px;
+    }
+
+    .service-number {
+        margin-bottom: 35px;
+    }
+
+}
