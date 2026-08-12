@@ -1326,3 +1326,530 @@ footer p {
     }
 
 }
+/* =========================================================
+   CME PAGE — DR. RAHUL KHAN PT
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CME HERO
+--------------------------------------------------------- */
+
+.cme-hero {
+    padding: 110px 0 100px;
+    background: #f6f3ec;
+}
+
+.cme-hero .container {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.cme-hero-content {
+    max-width: 760px;
+}
+
+.cme-hero h1 {
+    margin: 20px 0 25px;
+    font-size: clamp(48px, 6vw, 82px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+}
+
+.cme-hero h1 span {
+    color: #657b73;
+}
+
+.cme-hero .lead {
+    max-width: 650px;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.cme-hero-side {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cme-profile-card {
+    width: 100%;
+    max-width: 340px;
+    padding: 42px 35px;
+    border: 1px solid #d8d5cc;
+    background: #eeece5;
+}
+
+.cme-profile-card > span {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #657b73;
+}
+
+.cme-profile-card h2 {
+    margin: 0 0 12px;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.cme-profile-card p {
+    margin: 0;
+    line-height: 1.7;
+    color: #686b68;
+}
+
+
+
+/* ---------------------------------------------------------
+   CME SERVICES
+--------------------------------------------------------- */
+
+.cme-services {
+    padding: 110px 0;
+    background: #fbfaf6;
+}
+
+.cme-service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #ddd9d0;
+    border-left: 1px solid #ddd9d0;
+    margin-top: 60px;
+}
+
+.cme-service-item {
+    padding: 45px;
+    min-height: 250px;
+    border-right: 1px solid #ddd9d0;
+    border-bottom: 1px solid #ddd9d0;
+    background: #fbfaf6;
+    transition: background 0.25s ease;
+}
+
+.cme-service-item:hover {
+    background: #f1f0ea;
+}
+
+.cme-service-item > span {
+    display: block;
+    margin-bottom: 30px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #9a8d65;
+}
+
+.cme-service-item h3 {
+    margin: 0 0 14px;
+    font-size: 25px;
+}
+
+.cme-service-item p {
+    max-width: 520px;
+    margin: 0;
+    line-height: 1.75;
+    color: #6c6e6b;
+}
+
+
+
+/* ---------------------------------------------------------
+   PREVIOUS CME EXPERIENCE
+--------------------------------------------------------- */
+
+.previous-cme-section {
+    padding: 110px 0;
+    background: #f6f3ec;
+}
+
+.cme-history-card {
+    margin-top: 60px;
+    border: 1px solid #d9d6cd;
+    background: #fbfaf6;
+}
+
+.cme-history-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 30px;
+    border-bottom: 1px solid #ddd9d0;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #657b73;
+}
+
+.cme-history-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    padding: 55px;
+}
+
+.cme-history-content h3 {
+    margin: 18px 0;
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.cme-history-content p {
+    line-height: 1.8;
+    color: #686b68;
+}
+
+.cme-topic-list {
+    border-left: 1px solid #ddd9d0;
+    padding-left: 40px;
+}
+
+.cme-topic-list > div {
+    padding: 0 0 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #e0ddd5;
+}
+
+.cme-topic-list > div:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.cme-topic-list span {
+    display: inline-block;
+    margin-right: 15px;
+    font-family: Georgia, serif;
+    color: #9a8d65;
+}
+
+.cme-topic-list strong {
+    font-size: 17px;
+}
+
+.cme-topic-list p {
+    margin: 12px 0 0 36px;
+    font-size: 14px;
+}
+
+.cme-speakers {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 30px;
+    border-top: 1px solid #ddd9d0;
+    font-size: 13px;
+}
+
+.cme-speakers span:first-child {
+    margin-right: 8px;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    color: #657b73;
+}
+
+
+
+/* ---------------------------------------------------------
+   AWARDS
+--------------------------------------------------------- */
+
+.awards-section {
+    padding: 110px 0;
+    background: #20292a;
+    color: #f7f4ed;
+}
+
+.awards-section .section-intro h2 {
+    color: #f7f4ed;
+}
+
+.awards-section .section-intro p {
+    color: #c7cbc7;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.14);
+    border-left: 1px solid rgba(255,255,255,0.14);
+}
+
+.award-item {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 15px;
+    padding: 38px;
+    min-height: 160px;
+    border-right: 1px solid rgba(255,255,255,0.14);
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+
+.award-item > span {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #b5a779;
+}
+
+.award-item h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #f7f4ed;
+}
+
+.award-item p {
+    margin: 0;
+    color: #bfc4c1;
+    line-height: 1.6;
+}
+
+
+
+/* ---------------------------------------------------------
+   ACADEMIC INVITATION
+--------------------------------------------------------- */
+
+.invite-section {
+    padding: 110px 0;
+    background: #fbfaf6;
+}
+
+.invite-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 60px;
+    border-top: 1px solid #ddd9d0;
+    border-left: 1px solid #ddd9d0;
+}
+
+.invite-grid > div {
+    padding: 40px;
+    min-height: 210px;
+    border-right: 1px solid #ddd9d0;
+    border-bottom: 1px solid #ddd9d0;
+}
+
+.invite-grid span {
+    display: block;
+    margin-bottom: 28px;
+    font-family: Georgia, serif;
+    color: #9a8d65;
+}
+
+.invite-grid h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+}
+
+.invite-grid p {
+    margin: 0;
+    max-width: 500px;
+    line-height: 1.7;
+    color: #6c6e6b;
+}
+
+
+
+/* ---------------------------------------------------------
+   FINAL CTA
+--------------------------------------------------------- */
+
+.cme-final-cta {
+    padding: 120px 0;
+    background: #e9ece6;
+    text-align: center;
+}
+
+.final-cta-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.final-cta-content h2 {
+    margin: 20px 0;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.05;
+}
+
+.final-cta-content > p {
+    max-width: 650px;
+    margin: 15px auto;
+    line-height: 1.8;
+    color: #626865;
+}
+
+.final-cta-content .hero-actions {
+    justify-content: center;
+    margin-top: 35px;
+}
+
+
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+
+.site-footer {
+    padding: 55px 0 25px;
+    background: #20292a;
+    color: #e9ece6;
+}
+
+.site-footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.site-footer strong {
+    font-size: 18px;
+}
+
+.site-footer p {
+    margin: 8px 0;
+    color: #aeb5b1;
+    line-height: 1.6;
+}
+
+.site-footer a {
+    display: block;
+    margin-bottom: 10px;
+    color: #d8ddd9;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #b5a779;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    text-align: center;
+    color: #8e9692;
+    font-size: 12px;
+}
+
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .cme-hero {
+        padding: 75px 0 70px;
+    }
+
+    .cme-hero .container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .cme-hero-side {
+        justify-content: flex-start;
+    }
+
+    .cme-profile-card {
+        max-width: none;
+    }
+
+    .cme-service-grid,
+    .awards-grid,
+    .invite-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cme-history-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 35px;
+    }
+
+    .cme-topic-list {
+        border-left: none;
+        border-top: 1px solid #ddd9d0;
+        padding: 35px 0 0;
+    }
+
+    .site-footer .container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .cme-hero h1 {
+        font-size: 48px;
+        letter-spacing: -1px;
+    }
+
+    .cme-hero .lead {
+        font-size: 17px;
+    }
+
+    .cme-services,
+    .previous-cme-section,
+    .awards-section,
+    .invite-section {
+        padding: 75px 0;
+    }
+
+    .cme-service-item {
+        padding: 30px;
+        min-height: auto;
+    }
+
+    .cme-history-header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 20px;
+    }
+
+    .cme-history-content {
+        padding: 30px 22px;
+    }
+
+    .cme-history-content h3 {
+        font-size: 28px;
+    }
+
+    .cme-topic-list {
+        padding-top: 30px;
+    }
+
+    .award-item {
+        grid-template-columns: 40px 1fr;
+        padding: 28px 22px;
+    }
+
+    .award-item h3 {
+        font-size: 19px;
+    }
+
+    .invite-grid > div {
+        padding: 30px 25px;
+        min-height: auto;
+    }
+
+    .cme-final-cta {
+        padding: 80px 20px;
+    }
+
+    .final-cta-content h2 {
+        font-size: 40px;
+    }
+
+    .cme-speakers {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+}
