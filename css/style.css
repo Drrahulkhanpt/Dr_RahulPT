@@ -1200,3 +1200,129 @@ footer p {
     }
 
 }
+/* =========================================================
+   HOME ASSESSMENT CTA
+========================================================= */
+
+.home-visit-cta {
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin-top: 45px;
+
+    padding: 35px 40px;
+
+    background: var(--bg-soft);
+
+    border: 1px solid var(--border);
+
+}
+
+
+.home-visit-cta h3 {
+
+    margin: 10px 0 12px;
+
+    font-family: var(--serif);
+
+    font-size: 34px;
+
+}
+
+
+.home-visit-cta p {
+
+    max-width: 650px;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.home-visit-cta-action {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    min-width: 190px;
+
+}
+
+
+.home-visit-cta-action strong {
+
+    color: var(--accent);
+
+    font-family: var(--serif);
+
+    font-size: 42px;
+
+    line-height: 1;
+
+}
+
+
+.home-visit-cta-action span {
+
+    margin: 8px 0 18px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+@media (max-width: 700px) {
+
+    .home-visit-cta {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 30px 22px;
+
+    }
+
+
+    .home-visit-cta h3 {
+
+        font-size: 29px;
+
+    }
+
+
+    .home-visit-cta-action {
+
+        align-items: flex-start;
+
+    }
+
+
+    .home-visit-cta-action .btn {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+}
