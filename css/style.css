@@ -1862,3 +1862,2252 @@ section {
 }
 
 
+
+
+/* =========================================================
+   01. VISIT SECTION
+========================================================= */
+
+.visit-section {
+    position: relative;
+
+    padding: 100px 0;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* subtle background accent */
+
+.visit-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -220px;
+    top: 80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(27, 140, 145, 0.055);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   02. VISIT INTRO
+========================================================= */
+
+.visit-section .section-intro {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 720px;
+
+    margin-bottom: 42px;
+}
+
+
+.visit-section .section-intro h2 {
+    margin-bottom: 18px;
+}
+
+
+.visit-section .section-intro p {
+    max-width: 650px;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+.visit-section .section-intro .hindi-text {
+    margin-top: 8px;
+
+    color: var(--teal-700);
+}
+
+
+/* =========================================================
+   03. LOCATION GRID
+========================================================= */
+
+.visit-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================================
+   04. LOCATION CARDS
+========================================================= */
+
+.visit-card {
+    position: relative;
+
+    min-height: 310px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 32px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--teal-950),
+            var(--blue-900)
+        );
+
+    box-shadow:
+        0 15px 40px
+        rgba(7, 52, 59, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* second location */
+
+.visit-card:nth-child(2) {
+    background:
+        linear-gradient(
+            145deg,
+            var(--green-700),
+            var(--teal-700)
+        );
+}
+
+
+.visit-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 22px 55px
+        rgba(7, 52, 59, 0.18);
+}
+
+
+/* decorative circle */
+
+.visit-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    right: -100px;
+    top: -100px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.14);
+}
+
+
+.visit-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+
+    right: 30px;
+    top: 30px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.045);
+}
+
+
+/* =========================================================
+   05. LOCATION CARD CONTENT
+========================================================= */
+
+.visit-card > * {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.visit-card > span {
+    display: inline-block;
+
+    margin-bottom: 13px;
+
+    color:
+        rgba(255,255,255,0.62);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+.visit-card h3 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    line-height: 1.1;
+}
+
+
+.visit-card .time {
+    margin-bottom: 10px;
+
+    color:
+        rgba(255,255,255,0.92);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.visit-card p:not(.time) {
+    max-width: 430px;
+
+    margin-bottom: 20px;
+
+    color:
+        rgba(255,255,255,0.70);
+
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   06. BOOK VISIT LINK
+========================================================= */
+
+.visit-card .text-button {
+    align-self: flex-start;
+
+    display: inline-flex;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.38);
+
+    padding-bottom: 4px;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.visit-card .text-button:hover {
+    border-color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   07. HOME ASSESSMENT CTA
+   THIS IS THE HOMEPAGE BLOCK
+========================================================= */
+
+.home-visit-cta {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 45px;
+
+    margin-top: 25px;
+
+    padding: 38px 42px;
+
+    border:
+        1px solid
+        rgba(20, 115, 122, 0.13);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf8f3 0%,
+            #f5faf9 55%,
+            #edf6f8 100%
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(7, 52, 59, 0.055);
+}
+
+
+/* decorative side accent */
+
+.home-visit-cta::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 24px;
+    bottom: 24px;
+
+    width: 4px;
+
+    border-radius: 0 4px 4px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--teal-600),
+            var(--green-500)
+        );
+}
+
+
+/* =========================================================
+   08. HOME CTA CONTENT
+========================================================= */
+
+.home-visit-cta .eyebrow {
+    margin-bottom: 10px;
+}
+
+
+.home-visit-cta h3 {
+    margin-bottom: 10px;
+
+    color: var(--teal-950);
+
+    font-size: 25px;
+
+    line-height: 1.15;
+}
+
+
+.home-visit-cta p {
+    max-width: 650px;
+
+    margin-bottom: 8px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+.home-visit-cta p:last-child {
+    margin-bottom: 0;
+
+    color: var(--teal-700);
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   09. HOME CTA ACTION
+========================================================= */
+
+.home-visit-cta-action {
+    min-width: 175px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 5px;
+}
+
+
+.home-visit-cta-action strong {
+    color: var(--teal-900);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 36px;
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+.home-visit-cta-action span {
+    margin-bottom: 13px;
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.10em;
+
+    text-transform: uppercase;
+}
+
+
+.home-visit-cta-action .btn {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   10. TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .visit-section {
+        padding: 80px 0;
+    }
+
+
+    .visit-grid {
+        gap: 16px;
+    }
+
+
+    .visit-card {
+        min-height: 290px;
+
+        padding: 28px;
+    }
+
+
+    .visit-card h3 {
+        font-size: 25px;
+    }
+
+
+    .home-visit-cta {
+        grid-template-columns: 1fr auto;
+
+        gap: 30px;
+
+        padding: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   11. MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .visit-section {
+        padding: 70px 0;
+    }
+
+
+    .visit-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+        margin-top: 30px;
+    }
+
+
+    .visit-card {
+        min-height: 275px;
+
+        padding: 27px 24px;
+
+        border-radius: 16px;
+    }
+
+
+    .visit-card h3 {
+        font-size: 25px;
+    }
+
+
+    /* Home assessment becomes a proper
+       horizontal-looking CTA on mobile */
+
+    .home-visit-cta {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-top: 18px;
+
+        padding: 28px 24px;
+
+        border-radius: 16px;
+    }
+
+
+    .home-visit-cta-action {
+        min-width: 0;
+
+        align-items: flex-start;
+
+        width: 100%;
+    }
+
+
+    .home-visit-cta-action strong {
+        font-size: 32px;
+    }
+
+
+    .home-visit-cta-action .btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   12. VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .visit-card {
+        min-height: 260px;
+
+        padding: 24px 20px;
+    }
+
+
+    .visit-card h3 {
+        font-size: 23px;
+    }
+
+
+    .home-visit-cta {
+        padding: 25px 20px;
+    }
+
+
+    .home-visit-cta h3 {
+        font-size: 22px;
+    }
+
+}
+
+
+
+/* =========================================================
+   01. CME SECTION
+========================================================= */
+
+.cme-section {
+    position: relative;
+
+    padding: 105px 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5faf9 0%,
+            #ffffff 55%,
+            #edf7f4 100%
+        );
+}
+
+
+/* Decorative background */
+
+.cme-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: -260px;
+    bottom: -250px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(20, 115, 122, 0.10);
+
+    pointer-events: none;
+}
+
+
+.cme-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -120px;
+    top: -100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(88, 173, 131, 0.08);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   02. CME CONTAINER
+========================================================= */
+
+.cme-container {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(330px, 0.85fr);
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   03. CME CONTENT
+========================================================= */
+
+.cme-content {
+    max-width: 650px;
+}
+
+
+.cme-content h2 {
+    margin-bottom: 20px;
+
+    color: var(--teal-950);
+}
+
+
+.cme-content > p {
+    max-width: 590px;
+
+    margin-bottom: 14px;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+.cme-content .hindi-text {
+    color: var(--teal-700);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   04. CME BUTTON
+========================================================= */
+
+.cme-content .btn {
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   05. CME TOPIC GRID
+========================================================= */
+
+.cme-topics {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   06. TOPIC CARDS
+========================================================= */
+
+.cme-topics > div {
+    position: relative;
+
+    min-height: 205px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 24px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255,255,255,0.82);
+
+    box-shadow:
+        0 8px 28px
+        rgba(7, 52, 59, 0.045);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.cme-topics > div:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(20, 115, 122, 0.30);
+
+    box-shadow:
+        0 15px 35px
+        rgba(7, 52, 59, 0.09);
+}
+
+
+/* =========================================================
+   07. TOPIC NUMBER
+========================================================= */
+
+.cme-topics > div > span {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    margin-bottom: 22px;
+
+    border-radius: 9px;
+
+    background:
+        rgba(20, 115, 122, 0.08);
+
+    color: var(--teal-700);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+}
+
+
+.cme-topics > div:nth-child(2) > span {
+    background:
+        rgba(88, 173, 131, 0.12);
+
+    color: var(--green-700);
+}
+
+
+.cme-topics > div:nth-child(3) > span {
+    background:
+        rgba(23, 101, 143, 0.08);
+
+    color: var(--blue-700);
+}
+
+
+.cme-topics > div:nth-child(4) > span {
+    background:
+        rgba(20, 115, 122, 0.08);
+
+    color: var(--teal-700);
+}
+
+
+/* =========================================================
+   08. TOPIC TITLE
+========================================================= */
+
+.cme-topics h3 {
+    margin-bottom: 9px;
+
+    color: var(--text-dark);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   09. TOPIC DESCRIPTION
+========================================================= */
+
+.cme-topics p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   10. CME PHOTO STRIP
+   Use this if your HTML contains:
+   .cme-gallery
+========================================================= */
+
+.cme-gallery {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 0.8fr;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+
+.cme-gallery img {
+    width: 100%;
+
+    height: 210px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.cme-gallery img:first-child {
+    height: 290px;
+
+    grid-row: span 2;
+}
+
+
+/* =========================================================
+   11. CME PHOTO CARD
+========================================================= */
+
+.cme-photo-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    min-height: 240px;
+
+    background:
+        var(--teal-900);
+}
+
+
+.cme-photo-card img {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 240px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.cme-photo-card:hover img {
+    transform: scale(1.04);
+}
+
+
+.cme-photo-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(7,52,59,0.72)
+        );
+
+    pointer-events: none;
+}
+
+
+.cme-photo-caption {
+    position: absolute;
+
+    z-index: 3;
+
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   12. ACADEMIC TAG
+========================================================= */
+
+.cme-academic-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 18px;
+
+    color: var(--green-700);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.10em;
+
+    text-transform: uppercase;
+}
+
+
+.cme-academic-tag::before {
+    content: "";
+
+    width: 18px;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--teal-600),
+            var(--green-500)
+        );
+}
+
+
+/* =========================================================
+   13. TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .cme-section {
+        padding: 85px 0;
+    }
+
+
+    .cme-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .cme-content {
+        max-width: 750px;
+    }
+
+
+    .cme-topics {
+        max-width: 750px;
+    }
+
+}
+
+
+/* =========================================================
+   14. MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .cme-section {
+        padding: 70px 0;
+    }
+
+
+    .cme-container {
+        gap: 35px;
+    }
+
+
+    .cme-topics {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+
+    .cme-topics > div {
+        min-height: 190px;
+
+        padding: 19px;
+
+        border-radius: 14px;
+    }
+
+
+    .cme-topics > div > span {
+        width: 28px;
+        height: 28px;
+
+        margin-bottom: 17px;
+    }
+
+
+    .cme-topics h3 {
+        font-size: 12px;
+    }
+
+
+    .cme-topics p {
+        font-size: 10px;
+
+        line-height: 1.6;
+    }
+
+
+    .cme-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .cme-gallery img {
+        height: 150px;
+    }
+
+
+    .cme-gallery img:first-child {
+        height: 210px;
+    }
+
+}
+
+
+/* =========================================================
+   15. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .cme-topics {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cme-topics > div {
+        min-height: 155px;
+    }
+
+
+    .cme-gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cme-gallery img,
+    .cme-gallery img:first-child {
+        height: 220px;
+
+        grid-row: auto;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   01. PROFESSIONAL JOURNEY SECTION
+========================================================= */
+
+.credentials-section {
+    position: relative;
+
+    padding: 105px 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+.credentials-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    left: -220px;
+    top: -190px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(27, 140, 145, 0.045);
+
+    pointer-events: none;
+}
+
+
+.credentials-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -130px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(88, 173, 131, 0.065);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   02. INTRO
+========================================================= */
+
+.credentials-section .section-intro {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+
+    margin-bottom: 55px;
+}
+
+
+.credentials-section .section-intro h2 {
+    margin-bottom: 8px;
+
+    color: var(--teal-950);
+}
+
+
+.credentials-section .section-intro p {
+    color: var(--teal-700);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   03. PROFESSIONAL TIMELINE
+========================================================= */
+
+.credentials-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 0;
+
+    border-top:
+        1px solid
+        var(--border);
+}
+
+
+/* =========================================================
+   04. TIMELINE CONNECTING LINE
+========================================================= */
+
+.credentials-grid::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8%;
+
+    right: 8%;
+
+    top: 25px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--teal-300),
+            var(--green-400),
+            var(--blue-300)
+        );
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   05. JOURNEY ITEM
+========================================================= */
+
+.credentials-grid > div {
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 260px;
+
+    padding: 55px 28px 25px;
+
+    border-right:
+        1px solid
+        var(--border);
+}
+
+
+.credentials-grid > div:first-child {
+    padding-left: 0;
+}
+
+
+.credentials-grid > div:last-child {
+    border-right: 0;
+
+    padding-right: 0;
+}
+
+
+/* =========================================================
+   06. TIMELINE DOT
+========================================================= */
+
+.credentials-grid > div::before {
+    content: "";
+
+    position: absolute;
+
+    top: 17px;
+    left: 28px;
+
+    width: 17px;
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    border:
+        4px solid
+        var(--teal-500);
+
+    box-shadow:
+        0 0 0 5px
+        rgba(27, 140, 145, 0.08);
+}
+
+
+.credentials-grid > div:first-child::before {
+    left: 0;
+}
+
+
+.credentials-grid > div:nth-child(2)::before {
+    border-color:
+        var(--green-500);
+
+    box-shadow:
+        0 0 0 5px
+        rgba(88, 173, 131, 0.09);
+}
+
+
+.credentials-grid > div:nth-child(3)::before {
+    border-color:
+        var(--blue-500);
+
+    box-shadow:
+        0 0 0 5px
+        rgba(23, 101, 143, 0.08);
+}
+
+
+.credentials-grid > div:nth-child(4)::before {
+    border-color:
+        var(--teal-600);
+}
+
+
+/* =========================================================
+   07. JOURNEY CATEGORY
+========================================================= */
+
+.credentials-grid > div > span {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--teal-700);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   08. JOURNEY TITLE
+========================================================= */
+
+.credentials-grid h3 {
+    max-width: 240px;
+
+    margin-bottom: 12px;
+
+    color: var(--text-dark);
+
+    font-size: 20px;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   09. JOURNEY DESCRIPTION
+========================================================= */
+
+.credentials-grid p {
+    max-width: 230px;
+
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   10. HIGHLIGHT CURRENT STUDY
+========================================================= */
+
+.credentials-grid > div:last-child {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(27, 140, 145, 0.035),
+            transparent
+        );
+}
+
+
+.credentials-grid > div:last-child > span {
+    color: var(--green-700);
+}
+
+
+.credentials-grid > div:last-child h3 {
+    color: var(--teal-900);
+}
+
+
+/* =========================================================
+   11. OPTIONAL YEAR LABELS
+   If you add .journey-year in HTML
+========================================================= */
+
+.journey-year {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   12. OPTIONAL JOURNEY ICON
+========================================================= */
+
+.journey-icon {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 18px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(27, 140, 145, 0.08);
+
+    color: var(--teal-700);
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.credentials-grid > div:nth-child(2) .journey-icon {
+    background:
+        rgba(88, 173, 131, 0.10);
+
+    color: var(--green-700);
+}
+
+
+.credentials-grid > div:nth-child(3) .journey-icon {
+    background:
+        rgba(23, 101, 143, 0.08);
+
+    color: var(--blue-700);
+}
+
+
+.credentials-grid > div:nth-child(4) .journey-icon {
+    background:
+        rgba(27, 140, 145, 0.08);
+
+    color: var(--teal-700);
+}
+
+
+/* =========================================================
+   13. TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .credentials-section {
+        padding: 85px 0;
+    }
+
+
+    .credentials-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .credentials-grid::before {
+        display: none;
+    }
+
+
+    .credentials-grid > div {
+        min-height: 230px;
+
+        padding: 48px 22px 25px;
+
+        border-bottom:
+            1px solid
+            var(--border);
+    }
+
+
+    .credentials-grid > div:nth-child(2) {
+        border-right: 0;
+    }
+
+
+    .credentials-grid > div:nth-child(3) {
+        padding-left: 0;
+    }
+
+
+    .credentials-grid > div:nth-child(4) {
+        border-bottom: 0;
+    }
+
+
+    .credentials-grid > div::before,
+    .credentials-grid > div:first-child::before {
+        left: 22px;
+    }
+
+
+    .credentials-grid > div:first-child::before,
+    .credentials-grid > div:nth-child(3)::before {
+        left: 0;
+    }
+
+}
+
+
+/* =========================================================
+   14. MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .credentials-section {
+        padding: 70px 0;
+    }
+
+
+    .credentials-section .section-intro {
+        margin-bottom: 38px;
+    }
+
+
+    .credentials-grid {
+        display: block;
+
+        border-top: 0;
+
+        padding-left: 28px;
+    }
+
+
+    .credentials-grid::before {
+        display: block;
+
+        left: 7px;
+        right: auto;
+
+        top: 0;
+        bottom: 0;
+
+        width: 1px;
+        height: auto;
+
+        background:
+            linear-gradient(
+                180deg,
+                var(--teal-300),
+                var(--green-400),
+                var(--blue-300)
+            );
+    }
+
+
+    .credentials-grid > div,
+    .credentials-grid > div:first-child,
+    .credentials-grid > div:nth-child(3) {
+        min-height: auto;
+
+        padding:
+            10px 0 38px 28px;
+
+        border-right: 0;
+
+        border-bottom: 0;
+    }
+
+
+    .credentials-grid > div:last-child {
+        padding-bottom: 10px;
+    }
+
+
+    .credentials-grid > div::before,
+    .credentials-grid > div:first-child::before,
+    .credentials-grid > div:nth-child(3)::before {
+        left: -29px;
+
+        top: 10px;
+
+        width: 15px;
+        height: 15px;
+
+        border-width: 3px;
+    }
+
+
+    .credentials-grid h3 {
+        max-width: none;
+
+        font-size: 19px;
+    }
+
+
+    .credentials-grid p {
+        max-width: none;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   15. VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .credentials-grid {
+        padding-left: 25px;
+    }
+
+
+    .credentials-grid > div,
+    .credentials-grid > div:first-child,
+    .credentials-grid > div:nth-child(3) {
+        padding-left: 24px;
+    }
+
+
+    .credentials-grid > div::before,
+    .credentials-grid > div:first-child::before,
+    .credentials-grid > div:nth-child(3)::before {
+        left: -27px;
+    }
+
+}
+
+
+/* =========================================================
+   DR. RAHUL KHAN — CSS PART 7 / 10
+   AWARDS & RECOGNITION
+========================================================= */
+
+
+/* =========================================================
+   01. AWARDS SECTION
+========================================================= */
+
+.awards-section {
+    position: relative;
+
+    padding: 105px 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #07343b 0%,
+            #0a5960 48%,
+            #0c4d54 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* Decorative background */
+
+.awards-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -230px;
+    top: -220px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 0 0 45px
+        rgba(255,255,255,0.025),
+        0 0 0 90px
+        rgba(255,255,255,0.018);
+
+    pointer-events: none;
+}
+
+
+.awards-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    left: -170px;
+    bottom: -180px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(88,173,131,0.08);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   02. SECTION INTRO
+========================================================= */
+
+.awards-section .section-intro {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+
+    margin-bottom: 55px;
+}
+
+
+.awards-section .eyebrow {
+    color:
+        rgba(255,255,255,0.60);
+}
+
+
+.awards-section .section-intro h2 {
+    margin-bottom: 18px;
+
+    color: #ffffff;
+}
+
+
+.awards-section .section-intro p {
+    max-width: 650px;
+
+    color:
+        rgba(255,255,255,0.68);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   03. AWARDS GRID
+========================================================= */
+
+.awards-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   04. AWARD CARD
+========================================================= */
+
+.award-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.055);
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 14px 38px
+        rgba(0,0,0,0.13);
+
+    transition:
+        transform 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease;
+}
+
+
+.award-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(116,220,190,0.42);
+
+    box-shadow:
+        0 22px 48px
+        rgba(0,0,0,0.20);
+}
+
+
+/* =========================================================
+   05. AWARD IMAGE
+========================================================= */
+
+.award-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 280px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+.award-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.award-card:hover .award-image img {
+    transform: scale(1.035);
+}
+
+
+/* image bottom gradient */
+
+.award-image::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 65px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.22)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   06. AWARD INFO
+========================================================= */
+
+.award-info {
+    padding: 22px 22px 25px;
+}
+
+
+.award-info span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color:
+        #72d0b7;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+
+.award-info h3 {
+    margin-bottom: 9px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    line-height: 1.35;
+}
+
+
+.award-info p {
+    margin: 0;
+
+    color:
+        rgba(255,255,255,0.62);
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   07. AWARD NUMBER
+   Works if your HTML has .award-number
+========================================================= */
+
+.award-number {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 14px;
+    left: 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(7,52,59,0.76);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.20);
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    backdrop-filter: blur(7px);
+}
+
+
+/* =========================================================
+   08. OPTIONAL FEATURED AWARD
+   If one card has class="featured"
+========================================================= */
+
+.award-card.featured {
+    grid-column: span 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr 0.9fr;
+}
+
+
+.award-card.featured .award-image {
+    height: 100%;
+
+    min-height: 340px;
+}
+
+
+.award-card.featured .award-info {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 35px;
+}
+
+
+.award-card.featured .award-info h3 {
+    font-size: 21px;
+}
+
+
+/* =========================================================
+   09. RECOGNITION NOTE
+========================================================= */
+
+.awards-note {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 720px;
+
+    margin-top: 45px;
+
+    padding-top: 28px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.13);
+}
+
+
+.awards-note p {
+    margin: 0;
+
+    color:
+        rgba(255,255,255,0.62);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   10. TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .awards-section {
+        padding: 85px 0;
+    }
+
+
+    .awards-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .award-card.featured {
+        grid-column: span 2;
+    }
+
+}
+
+
+/* =========================================================
+   11. MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .awards-section {
+        padding: 70px 0;
+    }
+
+
+    .awards-section .section-intro {
+        margin-bottom: 35px;
+    }
+
+
+    .awards-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .award-card,
+    .award-card.featured {
+        grid-column: auto;
+
+        display: block;
+    }
+
+
+    .award-image,
+    .award-card.featured .award-image {
+        height: 260px;
+
+        min-height: 260px;
+    }
+
+
+    .award-info,
+    .award-card.featured .award-info {
+        padding: 20px;
+    }
+
+
+    .award-card.featured .award-info h3 {
+        font-size: 18px;
+    }
+
+
+    .award-info h3 {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   12. SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .award-image,
+    .award-card.featured .award-image {
+        height: 230px;
+
+        min-height: 230px;
+    }
+
+
+    .award-info {
+        padding: 18px;
+    }
+
+
+    .award-info h3 {
+        font-size: 14px;
+    }
+
+}
+
+
