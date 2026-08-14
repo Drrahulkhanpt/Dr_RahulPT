@@ -1,0 +1,1864 @@
+/* =========================================================
+   DR. RAHUL KHAN, PT
+   PERSONAL PROFESSIONAL WEBSITE
+   CSS — PART 1 / 10
+
+   DESIGN SYSTEM
+   Teal + Medical Blue + Green
+   Clean • Premium • Clinical • Modern
+========================================================= */
+
+
+/* =========================================================
+   01. COLOR SYSTEM
+========================================================= */
+
+:root {
+
+    /* Main brand colours */
+    --teal-950: #07343b;
+    --teal-900: #0b4149;
+    --teal-800: #105761;
+    --teal-700: #14737a;
+    --teal-600: #1b8c91;
+
+    /* Blue */
+    --blue-900: #0d3552;
+    --blue-800: #124a70;
+    --blue-700: #17658f;
+    --blue-100: #eaf4f8;
+
+    /* Green */
+    --green-700: #28785d;
+    --green-600: #32946f;
+    --green-500: #58ad83;
+    --green-100: #eaf6ef;
+
+    /* Backgrounds */
+    --cream: #f7f9f7;
+    --warm-white: #fbfcfa;
+    --white: #ffffff;
+
+    /* Text */
+    --text-dark: #173238;
+    --text: #34484d;
+    --text-muted: #66777a;
+    --text-light: #8b999b;
+
+    /* Borders */
+    --border: #dfe8e6;
+    --border-light: #eaf0ee;
+
+    /* Effects */
+    --shadow-sm:
+        0 5px 20px rgba(10, 55, 65, 0.06);
+
+    --shadow-md:
+        0 15px 40px rgba(10, 55, 65, 0.10);
+
+    --shadow-lg:
+        0 25px 70px rgba(10, 55, 65, 0.14);
+
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+
+    /* Layout */
+    --container: 1180px;
+
+}
+
+
+/* =========================================================
+   02. RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+
+    overflow-x: hidden;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-width: 0;
+
+    overflow-x: hidden;
+
+    background: var(--warm-white);
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+img {
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    border: 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   03. TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text-dark);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: 400;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+
+    font-size:
+        clamp(3rem, 6vw, 5.5rem);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.045em;
+}
+
+
+h2 {
+    margin-bottom: 18px;
+
+    font-size:
+        clamp(2.2rem, 4vw, 4rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -0.035em;
+}
+
+
+h3 {
+    margin-bottom: 12px;
+
+    font-size:
+        clamp(1.35rem, 2vw, 1.8rem);
+
+    line-height: 1.15;
+}
+
+
+p {
+    color: var(--text-muted);
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   04. GLOBAL CONTAINER
+========================================================= */
+
+.container {
+    width: min(
+        calc(100% - 48px),
+        var(--container)
+    );
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   05. SECTION FOUNDATION
+========================================================= */
+
+section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 100px 0;
+}
+
+
+.section-label,
+.eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 18px;
+
+    color: var(--teal-700);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+}
+
+
+.section-label::before,
+.eyebrow::before {
+    content: "";
+
+    width: 22px;
+
+    height: 2px;
+
+    flex: 0 0 22px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--teal-600),
+            var(--green-500)
+        );
+}
+
+
+.section-intro {
+    max-width: 680px;
+
+    margin-bottom: 45px;
+}
+
+
+.section-intro p {
+    max-width: 650px;
+
+    margin-bottom: 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   06. SITE HEADER
+========================================================= */
+
+.site-header {
+    position: relative;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    background:
+        rgba(251, 252, 250, 0.96);
+
+    border-bottom: 1px solid var(--border-light);
+}
+
+
+.site-header .container {
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   07. BRAND / LOGO
+========================================================= */
+
+.site-logo {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    flex: 0 0 auto;
+}
+
+
+.site-logo strong {
+    color: var(--teal-950);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+}
+
+
+.site-logo span {
+    margin-top: 5px;
+
+    color: var(--green-700);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   08. NAVIGATION
+========================================================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 26px;
+
+    min-width: 0;
+}
+
+
+.nav-links a {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 40px;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 5px;
+
+    width: 0;
+
+    height: 2px;
+
+    border-radius: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--teal-600),
+            var(--green-500)
+        );
+
+    transition:
+        width 0.25s ease;
+}
+
+
+.nav-links a:hover {
+    color: var(--teal-700);
+}
+
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   09. HEADER CTA
+========================================================= */
+
+.header-cta {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 0 18px;
+
+    border-radius: 7px;
+
+    background: var(--teal-800);
+
+    color: var(--white);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 7px 20px
+        rgba(11, 65, 73, 0.15);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.header-cta:hover {
+    background: var(--teal-600);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(11, 65, 73, 0.20);
+}
+
+
+/* =========================================================
+   10. GENERAL BUTTON SYSTEM
+========================================================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.btn-primary {
+    background: var(--teal-700);
+
+    color: var(--white);
+
+    box-shadow:
+        0 8px 24px
+        rgba(20, 115, 122, 0.16);
+}
+
+
+.btn-primary:hover {
+    background: var(--teal-600);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(20, 115, 122, 0.22);
+}
+
+
+.btn-secondary {
+    background: var(--green-600);
+
+    color: var(--white);
+}
+
+
+.btn-secondary:hover {
+    background: var(--green-700);
+
+    transform: translateY(-2px);
+}
+
+
+.btn-outline {
+    background: transparent;
+
+    color: var(--teal-800);
+
+    border: 1px solid var(--border);
+}
+
+
+.btn-outline:hover {
+    border-color: var(--teal-600);
+
+    background: var(--blue-100);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   11. TEXT LINKS
+========================================================= */
+
+.text-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--teal-700);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    border-bottom: 1px solid
+        rgba(20, 115, 122, 0.25);
+
+    padding-bottom: 3px;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.text-link::after {
+    content: "→";
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.text-link:hover {
+    color: var(--green-700);
+
+    border-color: var(--green-500);
+}
+
+
+.text-link:hover::after {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   12. SELECTION
+========================================================= */
+
+::selection {
+    background: var(--teal-700);
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   13. MOBILE FOUNDATION
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: min(
+            calc(100% - 36px),
+            var(--container)
+        );
+    }
+
+
+    section {
+        padding: 75px 0;
+    }
+
+
+    .site-header .container {
+        min-height: 68px;
+
+        gap: 18px;
+    }
+
+
+    .nav-links {
+        gap: 18px;
+    }
+
+
+    .header-cta {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   14. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: calc(100% - 30px);
+    }
+
+
+    section {
+        padding: 62px 0;
+    }
+
+
+    h1 {
+        font-size:
+            clamp(
+                2.65rem,
+                12vw,
+                4rem
+            );
+
+        line-height: 0.98;
+    }
+
+
+    h2 {
+        font-size:
+            clamp(
+                2rem,
+                9vw,
+                3rem
+            );
+    }
+
+
+    .section-label,
+    .eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 0.14em;
+    }
+
+
+    .section-intro {
+        margin-bottom: 30px;
+    }
+
+
+    .section-intro p {
+        font-size: 13px;
+    }
+
+
+    .site-header .container {
+        min-height: 62px;
+
+        gap: 12px;
+    }
+
+
+    .site-logo strong {
+        font-size: 16px;
+    }
+
+
+    .site-logo span {
+        font-size: 7px;
+
+        letter-spacing: 0.08em;
+    }
+
+
+    .nav-links {
+        gap: 14px;
+
+        overflow-x: auto;
+
+        justify-content: flex-end;
+
+        scrollbar-width: none;
+    }
+
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+
+    .nav-links a::after {
+        display: none;
+    }
+
+
+    .btn {
+        width: auto;
+
+        min-height: 46px;
+
+        padding: 0 18px;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   01. HERO FOUNDATION
+========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 680px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7fbfa 0%,
+            #eef7f5 48%,
+            #e8f3f6 100%
+        );
+}
+
+
+/* Decorative background shape */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 620px;
+    height: 620px;
+
+    top: -270px;
+    right: -150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(88, 173, 131, 0.18) 0%,
+            rgba(88, 173, 131, 0.06) 45%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+}
+
+
+/* Second decorative shape */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    bottom: -260px;
+    left: -170px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(20, 115, 122, 0.10);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   02. HERO CONTAINER
+========================================================= */
+
+.hero .container {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(320px, 0.85fr)
+        minmax(420px, 1.15fr);
+
+    align-items: center;
+
+    gap: 70px;
+
+    padding-top: 45px;
+
+    padding-bottom: 45px;
+}
+
+
+/* =========================================================
+   03. HERO IMAGE SIDE
+========================================================= */
+
+.hero-image {
+    position: relative;
+
+    order: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 88%;
+
+    height: 92%;
+
+    top: 4%;
+    left: 6%;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--teal-800),
+            var(--blue-900)
+        );
+
+    transform:
+        rotate(-4deg);
+
+    box-shadow:
+        var(--shadow-lg);
+
+    z-index: 0;
+}
+
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 88%;
+
+    height: 92%;
+
+    top: 7%;
+    left: 10%;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--green-500),
+            var(--teal-600)
+        );
+
+    opacity: 0.20;
+
+    transform:
+        rotate(4deg);
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   04. HERO PHOTO
+========================================================= */
+
+.hero-image img {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 470px;
+
+    height: 550px;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    border-radius: 24px;
+
+    border:
+        7px solid
+        rgba(255, 255, 255, 0.85);
+
+    background: var(--white);
+
+    box-shadow:
+        0 25px 65px
+        rgba(7, 52, 59, 0.18);
+}
+
+
+/* =========================================================
+   05. PHOTO LABEL
+========================================================= */
+
+.hero-image-label {
+    position: absolute;
+
+    z-index: 5;
+
+    left: -15px;
+
+    bottom: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 17px;
+
+    border-radius: 8px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    color: var(--teal-900);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+
+.hero-image-label::before {
+    content: "";
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--green-500);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(88, 173, 131, 0.14);
+}
+
+
+/* =========================================================
+   06. HERO CONTENT
+========================================================= */
+
+.hero-content {
+    position: relative;
+
+    order: 2;
+
+    max-width: 650px;
+}
+
+
+.hero-content .eyebrow {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   07. HERO TITLE
+========================================================= */
+
+.hero-content h1 {
+    margin-bottom: 22px;
+
+    color: var(--teal-950);
+
+    font-size:
+        clamp(
+            3.4rem,
+            5.4vw,
+            5.7rem
+        );
+
+    line-height: 0.91;
+
+    letter-spacing: -0.055em;
+}
+
+
+.hero-content h1 span {
+    display: block;
+
+    color: var(--teal-700);
+}
+
+
+.hero-content h1 .accent {
+    color: var(--green-700);
+}
+
+
+/* =========================================================
+   08. PROFESSIONAL DESIGNATION
+========================================================= */
+
+.hero-designation {
+    margin-bottom: 20px;
+
+    color: var(--blue-900);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            1.55rem,
+            2.5vw,
+            2.25rem
+        );
+
+    font-weight: 400;
+
+    line-height: 1.08;
+}
+
+
+.hero-designation strong {
+    display: block;
+
+    color: var(--teal-800);
+
+    font-weight: 400;
+}
+
+
+.hero-designation small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: var(--green-700);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.10em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   09. HERO TAGLINE
+========================================================= */
+
+.hero-tagline {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+
+.hero-tagline span {
+    display: inline-flex;
+
+    padding: 6px 11px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(20, 115, 122, 0.08);
+
+    color: var(--teal-800);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+}
+
+
+.hero-tagline span:last-child {
+    background:
+        rgba(88, 173, 131, 0.12);
+
+    color: var(--green-700);
+}
+
+
+/* =========================================================
+   10. HERO DESCRIPTION
+========================================================= */
+
+.hero-content > p {
+    max-width: 570px;
+
+    margin-bottom: 14px;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+.hero-content .hindi-text {
+    max-width: 560px;
+
+    margin-bottom: 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   11. HERO ACCENT LINE
+========================================================= */
+
+.hero-accent-line {
+    width: 70px;
+
+    height: 3px;
+
+    margin:
+        24px 0;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--teal-600),
+            var(--green-500)
+        );
+}
+
+
+/* =========================================================
+   12. HERO CREDENTIAL STRIP
+========================================================= */
+
+.hero-credentials {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 28px;
+}
+
+
+.hero-credentials span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 12px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 7px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    color: var(--text);
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+.hero-credentials span::before {
+    content: "✓";
+
+    color: var(--green-700);
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   13. HERO DECORATIVE MEDICAL MARK
+========================================================= */
+
+.hero-medical-mark {
+    position: absolute;
+
+    right: 8%;
+
+    bottom: 7%;
+
+    width: 90px;
+
+    height: 90px;
+
+    border:
+        1px solid
+        rgba(20, 115, 122, 0.14);
+
+    border-radius: 50%;
+
+    opacity: 0.8;
+}
+
+
+.hero-medical-mark::before,
+.hero-medical-mark::after {
+    content: "";
+
+    position: absolute;
+
+    background: var(--teal-600);
+
+    opacity: 0.35;
+}
+
+
+.hero-medical-mark::before {
+    width: 1px;
+
+    height: 42px;
+
+    top: 24px;
+    left: 44px;
+}
+
+
+.hero-medical-mark::after {
+    width: 42px;
+
+    height: 1px;
+
+    top: 44px;
+    left: 24px;
+}
+
+
+/* =========================================================
+   14. HERO MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        min-height: auto;
+    }
+
+
+    .hero .container {
+        grid-template-columns:
+            minmax(280px, 0.9fr)
+            minmax(320px, 1.1fr);
+
+        gap: 40px;
+    }
+
+
+    .hero-image img {
+        height: 480px;
+    }
+
+
+    .hero-content h1 {
+        font-size:
+            clamp(
+                3rem,
+                6vw,
+                4.5rem
+            );
+    }
+
+}
+
+
+/* =========================================================
+   15. MOBILE HERO
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .hero {
+        padding:
+            45px 0 65px;
+    }
+
+
+    .hero .container {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 42px;
+
+        padding-top: 0;
+
+        padding-bottom: 0;
+    }
+
+
+    .hero-image {
+        order: 1;
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .hero-image img {
+        width: 100%;
+
+        max-width: 390px;
+
+        height: 470px;
+
+        border-radius: 20px;
+    }
+
+
+    .hero-image::before {
+        width: 86%;
+
+        height: 92%;
+
+        left: 7%;
+
+        border-radius: 22px;
+    }
+
+
+    .hero-image::after {
+        width: 86%;
+
+        height: 92%;
+
+        left: 10%;
+
+        border-radius: 22px;
+    }
+
+
+    .hero-image-label {
+        left: 5px;
+
+        bottom: 22px;
+
+        font-size: 9px;
+
+        padding: 10px 13px;
+    }
+
+
+    .hero-content {
+        order: 2;
+
+        width: 100%;
+    }
+
+
+    .hero-content h1 {
+        margin-bottom: 18px;
+
+        font-size:
+            clamp(
+                2.8rem,
+                13vw,
+                4.2rem
+            );
+
+        line-height: 0.94;
+    }
+
+
+    .hero-designation {
+        font-size: 1.65rem;
+    }
+
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+
+    .hero-content .hindi-text {
+        font-size: 12px;
+    }
+
+
+    .hero-medical-mark {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   16. VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+        padding-top: 35px;
+    }
+
+
+    .hero-image img {
+        height: 420px;
+
+        border-width: 5px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 2.7rem;
+    }
+
+
+    .hero-designation {
+        font-size: 1.45rem;
+    }
+
+
+    .hero-credentials {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .hero-credentials span {
+        min-width: 0;
+
+        padding: 8px;
+
+        font-size: 9px;
+    }
+
+}
+/* =========================================================
+   CLINICAL APPROACH
+   ========================================================= */
+
+.approach-section {
+  position: relative;
+  background: #ffffff;
+  padding: 110px 0;
+  overflow: hidden;
+}
+
+.approach-section::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: rgba(27, 142, 137, 0.06);
+  right: -160px;
+  top: 120px;
+  pointer-events: none;
+}
+
+.approach-header {
+  max-width: 900px;
+  margin-bottom: 65px;
+}
+
+.approach-header h2 {
+  max-width: 850px;
+  margin: 18px 0 20px;
+}
+
+.approach-header p {
+  max-width: 760px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.approach-header .hindi-text {
+  margin-top: 10px;
+  color: var(--teal);
+  font-weight: 500;
+}
+
+
+/* APPROACH ITEMS */
+
+.approach-list {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid var(--border);
+}
+
+.approach-item {
+  display: grid;
+  grid-template-columns: 100px minmax(220px, 1fr) 2fr;
+  gap: 30px;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.approach-item:hover {
+  padding-left: 14px;
+  background: rgba(27, 142, 137, 0.025);
+}
+
+.approach-number {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+}
+
+.approach-title {
+  font-family: var(--font-serif);
+  font-size: 25px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.approach-title .hindi-title {
+  display: block;
+  margin-top: 7px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.approach-description {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+  max-width: 600px;
+}
+
+
+/* =========================================================
+   ONLINE ASSESSMENT
+   ========================================================= */
+
+.online-section {
+  position: relative;
+  background: var(--deep-teal);
+  color: #ffffff;
+  padding: 115px 0;
+  overflow: hidden;
+}
+
+.online-section::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 50%;
+  right: -210px;
+  top: -150px;
+}
+
+.online-section::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(73, 190, 166, 0.08);
+  left: -130px;
+  bottom: -140px;
+}
+
+.online-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  gap: 90px;
+  align-items: center;
+}
+
+.online-content {
+  max-width: 600px;
+}
+
+.online-content h2 {
+  color: #ffffff;
+  margin: 18px 0 25px;
+  max-width: 600px;
+}
+
+.online-content p {
+  color: rgba(255,255,255,0.72);
+  line-height: 1.8;
+  max-width: 540px;
+}
+
+.online-content .hindi-text {
+  color: rgba(255,255,255,0.85);
+  margin-top: 12px;
+}
+
+
+/* ONLINE PRICE */
+
+.online-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 30px 0;
+}
+
+.online-price span {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+}
+
+.online-price strong {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+
+/* ONLINE PROCESS */
+
+.online-process {
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+.online-step {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 20px;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+
+.online-step-number {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: #73cbb8;
+}
+
+.online-step h3 {
+  margin: 0 0 7px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.online-step p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.62);
+}
+
+
+/* =========================================================
+   ONLINE BUTTON
+   ========================================================= */
+
+.online-section .btn-primary {
+  background: #ffffff;
+  color: var(--deep-teal);
+  border-color: #ffffff;
+}
+
+.online-section .btn-primary:hover {
+  background: #bfe9df;
+  border-color: #bfe9df;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .approach-section,
+  .online-section {
+    padding: 90px 0;
+  }
+
+  .approach-item {
+    grid-template-columns: 70px minmax(200px, 1fr) 1.5fr;
+    gap: 20px;
+  }
+
+  .online-inner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .online-content {
+    max-width: 700px;
+  }
+}
+
+
